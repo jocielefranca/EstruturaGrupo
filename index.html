@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Nova Estrutura Organizacional (Transição - Produtos X Tecnologia) 2025 - Centro de Excelência</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1B5E20 0%, #26A69A 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #1B5E20;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .slide-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .main-leadership-box {
+            background: #1B5E20;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(27, 94, 32, 0.3);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .leadership-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .leadership-subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        /* Centro de Excelência Styles */
+        .excellence-center {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .excellence-center::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: excellencePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes excellencePulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.3; }
+        }
+
+        .excellence-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .excellence-subtitle {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Connection Lines - Mais suave */
+        .connection-arrows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 1.5em;
+            color: rgba(255, 107, 107, 0.7);
+        }
+
+        .connection-arrows::before,
+        .connection-arrows::after {
+            content: "⟷";
+            margin: 0 10px;
+            animation: arrowFlow 2s ease-in-out infinite;
+        }
+
+        @keyframes arrowFlow {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        .ecosystems-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .ecosystem-box {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .ecosystem-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .ecosystem-production {
+            border-left-color: #26A69A;
+        }
+
+        .ecosystem-client {
+            border-left-color: #00BCD4;
+        }
+
+        .ecosystem-operations {
+            border-left-color: #1B5E20;
+        }
+
+        /* Excellence Focus badges */
+        .excellence-focus {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .ecosystem-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1B5E20;
+        }
+
+        .ecosystem-leader {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .ecosystem-areas {
+            list-style: none;
+        }
+
+        .ecosystem-areas li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .central-intelligence {
+            background: #26A69A;
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(38, 166, 154, 0.3);
+        }
+
+        .intelligence-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .intelligence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .intelligence-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .intelligence-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .intelligence-card-title {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .tech-infrastructure-full {
+            background: #00BCD4;
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 15px 30px rgba(0, 188, 212, 0.3);
+            margin-top: 30px;
+        }
+
+        .tech-title-full {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tech-leader-full {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .tech-responsibilities-full {
+            font-size: 0.9em;
+            opacity: 0.85;
+            line-height: 1.4;
+        }
+
+        /* Enhanced Diagram Styles */
+        .diagram-container {
+            max-width: 1100px;
+            width: 100%;
+            background: #f7fafc;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .diagram-title {
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #1B5E20;
+            margin-bottom: 30px;
+        }
+
+        .main-leadership {
+            background: #1B5E20;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 0 auto 25px auto;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 15px 30px rgba(27, 94, 32, 0.3);
+        }
+
+        .excellence-center-diagram {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .excellence-center-diagram::before {
+            content: "";
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            animation: diagramPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes diagramPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 0.4; }
+        }
+
+        .excellence-center-title-diagram {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .excellence-center-subtitle-diagram {
+            font-size: 0.9em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vertical-arrow {
+            text-align: center;
+            font-size: 1.8em;
+            color: rgba(255, 107, 107, 0.7);
+            margin: 15px 0;
+            animation: bounceArrow 2s ease-in-out infinite;
+        }
+
+        @keyframes bounceArrow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .ecosystems-container-diagram {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .ecosystem {
+            flex: 1;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            min-height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .ecosystem::after {
+            content: "🚀";
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            font-size: 1.2em;
+            opacity: 0.7;
+        }
+
+        .ecosystem-production-diagram {
+            background: linear-gradient(135deg, #26A69A, #1B5E20);
+        }
+
+        .ecosystem-client-diagram {
+            background: linear-gradient(135deg, #00BCD4, #26A69A);
+        }
+
+        .ecosystem-operations-diagram {
+            background: linear-gradient(135deg, #1B5E20, #26A69A);
+        }
+
+        .ecosystem-title-diagram {
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .ecosystem-leader-diagram {
+            font-size: 0.85em;
+            margin-bottom: 8px;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .ecosystem-subtitle-diagram {
+            font-size: 0.8em;
+            opacity: 0.8;
+            line-height: 1.3;
+        }
+
+        .excellence-focus-diagram {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.7em;
+            margin-top: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .intelligence-section-diagram {
+            margin: 25px 0;
+        }
+
+        .intelligence-core-diagram {
+            background: #26A69A;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(38, 166, 154, 0.4);
+        }
+
+        .section-title-diagram {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-leader-diagram {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .intelligence-content-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .intelligence-item-diagram {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .item-icon-diagram {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+
+        .item-title-diagram {
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-description-diagram {
+            font-size: 0.8em;
+            opacity: 0.9;
+            line-height: 1.3;
+        }
+
+        .tech-section-diagram {
+            margin: 25px 0;
+        }
+
+        .tech-infrastructure-diagram {
+            background: #00BCD4;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0, 188, 212, 0.4);
+        }
+
+        .tech-title-diagram {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tech-leader-diagram {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .tech-responsibilities-diagram {
+            font-size: 0.9em;
+            opacity: 0.85;
+            line-height: 1.4;
+        }
+
+        /* Value Proposition Styles */
+        .value-proposition {
+            background: linear-gradient(135deg, #1B5E20 0%, #26A69A 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(27, 94, 32, 0.3);
+        }
+
+        .value-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .value-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .value-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .highlight-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight-desc {
+            font-size: 0.95em;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Modelo de Funcionamento Styles */
+        .functioning-model {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .model-block {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid;
+            transition: all 0.3s ease;
+        }
+
+        .model-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .model-title {
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .model-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .model-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .principles-container {
+            background: linear-gradient(135deg, #1B5E20 0%, #26A69A 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .principle-item {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .principle-item:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* Novos estilos para conectores - Versão mais suave */
+        .connector-lines {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin: 20px 0;
+        }
+
+        .horizontal-connector {
+            position: absolute;
+            height: 1px;
+            background: rgba(255, 107, 107, 0.3);
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .vertical-connector {
+            position: absolute;
+            width: 1px;
+            background: rgba(255, 107, 107, 0.3);
+            height: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .connector-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 107, 107, 0.5);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ecosystem-connectors {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .ecosystem-connector {
+            width: 30%;
+            height: 1px;
+            background: rgba(255, 107, 107, 0.3);
+            position: relative;
+        }
+
+        .ecosystem-connector::before,
+        .ecosystem-connector::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 30px;
+            background: rgba(255, 107, 107, 0.3);
+            top: -30px;
+        }
+
+        .ecosystem-connector::before {
+            left: 0;
+        }
+
+        .ecosystem-connector::after {
+            right: 0;
+        }
+
+        .intelligence-split {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .intelligence-half {
+            width: 48%;
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+
+        .intelligence-leader {
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .excellence-connections {
+            position: relative;
+            height: 80px;
+            margin: 20px 0;
+        }
+
+        .excellence-line {
+            position: absolute;
+            height: 1px;
+            background: rgba(255, 107, 107, 0.3);
+            width: 100%;
+            top: 50%;
+        }
+
+        .excellence-dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 142, 83, 0.5);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .connection-arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid rgba(255, 107, 107, 0.5);
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .connection-label {
+            position: absolute;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #FF6B6B;
+            font-weight: 600;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 25px 15px;
+            }
+            
+            .ecosystems-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .ecosystems-container-diagram {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .excellence-center {
+                padding: 20px;
+            }
+            
+            .connection-arrows::before,
+            .connection-arrows::after {
+                content: "↕";
+            }
+            
+            .functioning-model {
+                grid-template-columns: 1fr;
+            }
+            
+            .value-highlights {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-leadership-box, .main-leadership {
+                padding: 20px;
+            }
+            
+            .intelligence-split {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .intelligence-half {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Nova Estrutura 2025 com Centro de Excelência -->
+        <div class="slide">
+            <div class="slide-title">Nova Estrutura Organizacional </div>
+<div class="slide-title"> [Transição - Produtos & Tecnologia] 2025 </div>
+            <div class="slide-subtitle">Três Ecossistemas Integrados + Centro de Excelência para Transformação Digital</div>
+            
+            <div class="main-leadership-box">
+                <div class="leadership-title">🎯 ESTRUTURA DE CONEXÃO ESTRATÉGICA</div>
+                <div class="leadership-subtitle">
+                    Produtos Digitais • Customer Experience • Dados & IA Organizacional
+                </div>
+            </div>
+
+            <div class="ecosystems-container">
+                <!-- Ecossistema de Produção -->
+                <div class="ecosystem-box ecosystem-production">
+                    <div class="ecosystem-title">🏗️ ECOSSISTEMA DE PRODUÇÃO</div>
+                    <div class="ecosystem-leader"><strong>LIDERANÇA: ANDRESSA - INICIATIVAS DE TRANSFORMAÇÃO DIGITAL</strong></div>
+                    <div class="excellence-focus">💡 Foco Excelência: Tecnologias Construtivas, BIM e Industrialização da Obra</div>
+                    <ul class="ecosystem-areas">
+                        <li>ENGENHARIA DE OBRA - DIAGONAL</li>
+                        <li>ENGENHARIA DE OBRA - VICTA</li>
+                        <li>INCORPORAÇÃO</li>
+                        <li>PROJETOS</li>
+                        <li>SUPRIMENTOS</li>
+                        <li>SALA TÉCNICA OBRA</li>
+                        <li>PRODUTO</li>
+                    </ul>
+                </div>
+                
+                <!-- Ecossistema do Cliente -->
+                <div class="ecosystem-box ecosystem-client">
+                    <div class="ecosystem-title">🤝 ECOSSISTEMA DO CLIENTE</div>
+                    <div class="ecosystem-leader"><strong>LIDERANÇA: JÔ - INICIATIVAS DE TRANSFORMAÇÃO DIGITAL</strong></div>
+                    <div class="excellence-focus">💡 Foco Excelência: Experiência Digital do Cliente (CX), MVPs Ágeis, UX/UI e Jornada Omnichannel</div>
+                    <ul class="ecosystem-areas">
+                        <li>RELACIONAMENTO COM O CLIENTE</li>
+                        <li>COMERCIAL - DIAGONAL</li>
+                        <li>COMERCIAL - VICTA</li>
+                        <li>ASSISTÊNCIA TÉCNICA</li>
+                        <li>MARKETING</li>
+                        <li>COBRANÇA</li>
+                        <li>REPASSE</li>
+                        <li>CRÉDITO IMOBILIÁRIO PJ</li>
+                    </ul>
+                </div>
+                
+                <!-- Ecossistema de Operações -->
+                <div class="ecosystem-box ecosystem-operations">
+                    <div class="ecosystem-title">⚙️ ECOSSISTEMA DE OPERAÇÕES</div>
+                    <div class="ecosystem-leader"><strong>LIDERANÇA: JÔ - INICIATIVAS DE TRANSFORMAÇÃO DIGITAL</strong></div>
+                    <div class="excellence-focus">💡 Foco Excelência:  Eficiência Operacional com BI, Process Mining e Automatização Inteligente</div>
+                    <ul class="ecosystem-areas">
+                        <li>GENTE E GESTÃO</li>
+                        <li>DEPARTAMENTO PESSOAL</li>
+                        <li>FINANCEIRO</li>
+                        <li>CONTROLADORIA</li>
+                        <li>CONTABILIDADE</li>
+                        <li>JURÍDICO</li>
+                        <li>EXCELÊNCIA OPERACIONAL</li>
+                        <li>ORÇAMENTO</li>
+                        <li>PLANEJAMENTO E CONTROLE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Centro de Excelência posicionado abaixo dos ecossistemas -->
+            <div class="excellence-center" style="margin-top: 30px;">
+                <div class="excellence-title">🎯 CENTRO DE EXCELÊNCIA DIGITAL</div>
+                <div class="excellence-subtitle"><strong>Otimização de Processos • Métodos Ágeis • Formação Continuada • Intraempreendedorismo </strong></div>
+                <div class="excellence-subtitle">Parceria transversal com todos os ecossistemas</div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Núcleo Central de Inteligência com BI destacado -->
+        <div class="slide">
+            <div class="slide-title">Núcleo Central de Inteligência & Dados</div>
+            <div class="slide-subtitle">Coordenação estratégica transversal a todos os ecossistemas</div>
+            
+            <div class="central-intelligence">
+                <div class="intelligence-title">🧠 NÚCLEO DE INTELIGÊNCIA E DADOS</div>
+                <div style="font-size: 1em; margin-bottom: 25px; opacity: 0.9;">
+                    <strong>LIDERANÇA: - INICIATIVAS DE TRANSFORMAÇÃO DIGITAL</strong>
+                </div>
+                
+                <div class="intelligence-grid">
+                    <div class="intelligence-card" style="background: rgba(255,255,255,0.25); border: 2px solid white;">
+                        <div class="intelligence-icon">📊</div>
+                        <div class="intelligence-card-title">BUSINESS INTELLIGENCE</div>
+                        <p><strong>Ecossistema de Produção:</strong> Andressa<br>
+                           <strong>Ecossistemas Cliente & Operações:</strong> Jô</p>
+                    </div>
+                    
+                    <div class="intelligence-card">
+                        <div class="intelligence-icon">🔍</div>
+                        <div class="intelligence-card-title">INTELIGÊNCIA DE MERCADO</div>
+                        <p>Análise competitiva focada nos ecossistemas de Clientes com foco em geração de receitas</p>
+                    </div>
+                    
+                    <div class="intelligence-card">
+                        <div class="intelligence-icon">🤖</div>
+                        <div class="intelligence-card-title">CENTRO DE IA ORGANIZACIONAL</div>
+                        <p>Coordenação de IA para Clientes e Operações</p>
+                    </div>
+                    
+                    <div class="intelligence-card">
+                        <div class="intelligence-icon">🔐</div>
+                        <div class="intelligence-card-title">GOVERNANÇA DE DADOS</div>
+                        <p>Segurança, qualidade e compliance de dados organizacionais (transversal a todos)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Infraestrutura Tecnológica como base -->
+            <div class="tech-infrastructure-full">
+                <div class="tech-title-full">💻 INFRAESTRUTURA TECNOLÓGICA (BASE DE TODOS OS ECOSSISTEMAS)</div>
+                <div class="tech-leader-full">LIDERANÇA: VANDER - INFRAESTRUTURA TECNOLÓGICA</div>
+                <div class="tech-responsibilities-full">
+                    Infraestrutura • Sistemas • Redes • Security • Suporte Técnico Organizacional • Sustentação de Todos os Ecossistemas
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Diagrama Organizacional Visual Atualizado -->
+        <div class="slide">
+            <div class="slide-title">Diagrama Organizacional Visual</div>
+            <div class="slide-subtitle">Representação da estrutura integrada com Centro de Excelência</div>
+            
+            <div class="diagram-container">
+                <div class="diagram-title">📊 Diagrama Organizacional Visual</div>
+                
+                <!-- Liderança Principal -->
+                <div class="main-leadership">
+                    <div class="leadership-title">🎯 ESTRUTURA DE CONEXÃO ESTRATÉGICA</div>
+                    <div class="leadership-subtitle">
+                        Produtos Digitais • Customer Experience • Dados & IA Organizacional
+                    </div>
+                </div>
+                
+                <!-- Conector visual - Versão mais suave -->
+                <div class="connector-lines">
+                    <div class="horizontal-connector"></div>
+                    <div class="vertical-connector"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                
+                <!-- Três Ecossistemas em destaque -->
+                <div class="ecosystems-container-diagram">
+                    <!-- Ecossistema de Produção -->
+                    <div class="ecosystem ecosystem-production-diagram">
+                        <div class="ecosystem-title-diagram">ECOSSISTEMA DE PRODUÇÃO</div>
+                        <div class="ecosystem-leader-diagram"><strong>LIDERANÇA: ANDRESSA</strong></div>
+                        <div class="ecosystem-subtitle-diagram">🏗️ Inovação Produtiva<br>⚙️ Digitalização Construtiva</div>
+                    </div>
+                    
+                    <!-- Ecossistema do Cliente -->
+                    <div class="ecosystem ecosystem-client-diagram">
+                        <div class="ecosystem-title-diagram">ECOSSISTEMA DO CLIENTE</div>
+                        <div class="ecosystem-leader-diagram"><strong>LIDERANÇA: JÔ</strong></div>
+                        <div class="ecosystem-subtitle-diagram">🤝 Produtos Digitais CX<br>🎯 Transformação Digital</div>
+                    </div>
+                    
+                    <!-- Ecossistema de Operações -->
+                    <div class="ecosystem ecosystem-operations-diagram">
+                        <div class="ecosystem-title-diagram">ECOSSISTEMA DE OPERAÇÕES</div>
+                        <div class="ecosystem-leader-diagram"><strong>LIDERANÇA: JÔ</strong></div>
+                        <div class="ecosystem-subtitle-diagram">⚙️ Produtos Digitais Ops<br>🔄 Automação Operacional</div>
+                    </div>
+                </div>
+                
+                <!-- Conectores dos Ecossistemas para o Centro de Excelência - Versão mais suave -->
+                <div class="excellence-connections">
+                    <div class="excellence-line"></div>
+                    <div class="excellence-dot"></div>
+                    <div class="connection-arrow"></div>
+                    <div class="connection-label">PARCERIA TRANSVERSAL</div>
+                </div>
+                
+                <!-- Centro de Excelência Digital -->
+                <div class="excellence-center-diagram" style="margin: 0 auto 20px;">
+                    <div class="excellence-center-title-diagram">🎯 CENTRO DE EXCELÊNCIA DIGITAL</div>
+                    <div class="excellence-center-subtitle-diagram">
+                        <strong>Otimização de Processos • Métodos Ágeis • Formação Continuada • Intraempreendedorismo</strong>
+                    </div>
+                </div>
+                
+                <!-- Conector do Centro para o Núcleo - Versão mais suave -->
+                <div class="vertical-arrow">↓</div>
+                <div style="text-align: center; font-size: 0.9em; color: #666; margin: 10px 0;">
+                    Suporte metodológico e capacitação
+                </div>
+                
+                <!-- Núcleo de Inteligência com BI dividido -->
+                <div class="intelligence-section-diagram">
+                    <div class="intelligence-core-diagram">
+                        <div class="section-title-diagram">🧠 NÚCLEO DE INTELIGÊNCIA E DADOS</div>
+                        <div class="section-leader-diagram"><strong>LIDERANÇA: </strong></div>
+                        
+                        <div class="intelligence-split">
+                            <div class="intelligence-half">
+                                <div class="item-icon-diagram">📊</div>
+                                <div class="item-title-diagram">BUSINESS INTELLIGENCE</div>
+                                <div class="item-description-diagram">Ecossistemas de Cliente e Operações</div>
+                                <span class="intelligence-leader">Liderança: JÔ</span>
+                            </div>
+                            
+                            <div class="intelligence-half">
+                                <div class="item-icon-diagram">📊</div>
+                                <div class="item-title-diagram">BUSINESS INTELLIGENCE</div>
+                                <div class="item-description-diagram">Ecossistema de Produção</div>
+                                <span class="intelligence-leader">Liderança: ANDRESSA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="intelligence-content-diagram" style="margin-top: 20px;">
+                            <div class="intelligence-item-diagram">
+                                <div class="item-icon-diagram">🤖</div>
+                                <div class="item-title-diagram">CENTRO DE IA</div>
+                                <div class="item-description-diagram">Coordenação de IA para todos os ecossistemas</div>
+                            </div>
+                            
+                            <div class="intelligence-item-diagram">
+                                <div class="item-icon-diagram">🔍</div>
+                                <div class="item-title-diagram">INTELIGÊNCIA DE MERCADO</div>
+                                <div class="item-description-diagram">Análise competitiva e oportunidades</div>
+                            </div>
+                            
+                            <div class="intelligence-item-diagram">
+                                <div class="item-icon-diagram">🔐</div>
+                                <div class="item-title-diagram">GOVERNANÇA DE DADOS</div>
+                                <div class="item-description-diagram">Segurança e qualidade dos dados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Conector para Infraestrutura - Versão mais suave -->
+                <div class="vertical-arrow">↓</div>
+                <div style="text-align: center; font-size: 0.9em; color: #666; margin: 10px 0;">
+                   Suporte estratégico e sustentação tecnológica
+                </div>
+                
+                <!-- Infraestrutura Tecnológica -->
+                <div class="tech-section-diagram">
+                    <div class="tech-infrastructure-diagram">
+                        <div class="tech-title-diagram">💻 INFRAESTRUTURA TECNOLÓGICA (BASE DE TODOS OS ECOSSISTEMAS)</div>
+                        <div class="tech-leader-diagram"><strong>LIDERANÇA: VANDER</strong></div>
+                        <div class="tech-responsibilities-diagram">
+                            Infraestrutura • Sistemas • Redes • Security • Suporte Técnico Organizacional
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Modelo de Funcionamento do Centro de Excelência (ATUALIZADO) -->
+        <div class="slide">
+            <div class="slide-title">Modelo de Funcionamento do Centro de Excelência</div>
+            <div class="slide-subtitle">Foco em capacitação, produtividade e intraempreendedorismo</div>
+            
+            <div class="functioning-model">
+                <!-- Bloco 1: Intraempreendedorismo -->
+                <div class="model-block" style="border-left-color: #FF6B6B;">
+                    <h3 class="model-title" style="color: #FF6B6B;">🚀 INTRAEMPREENDEDORISMO</h3>
+                    <ul class="model-list">
+                        <li>• Programa de Ideias Internas</li>
+                        <li>• Pitch Sessions </li>
+                        <li>• Mentoria para projetos</li>
+                        <li>• Incubação de iniciativas</li>
+                        <li>• Prêmio de Inovação Interna</li>
+                    </ul>
+                </div>
+                
+                <!-- Bloco 2: IA & Produtividade (versão ajustada) -->
+                <div class="model-block" style="border-left-color: #26A69A;">
+                    <h3 class="model-title" style="color: #26A69A;">📈 PRODUTIVIDADE & OTIMIZAÇÃO</h3>
+                    <ul class="model-list">
+                        <li>• Exploração de processos e análise de fluxos</li>
+                        <li>• Métodos Lean para eficiência</li>
+                        <li>• Capacitação em análise de processos</li>
+                        <li>• Indicadores de performance (KPIs)</li>
+                    </ul>
+                </div>
+                
+                <!-- Bloco 3: Capacitação -->
+                <div class="model-block" style="border-left-color: #00BCD4;">
+                    <h3 class="model-title" style="color: #00BCD4;">🎓 CAPACITAÇÃO DIGITAL</h3>
+                    <ul class="model-list">
+                        <li>• Trilhas de Aprendizado Digital</li>
+                        <li>• Aprimoramento e Requalificação </li>
+                        <li>• Certificações Tecnológicas</li>
+                        <li>• Workshops de Produtividade</li>
+                        <li>• Comunidades de Prática</li>
+                    </ul>
+                </div>
+                
+                <!-- Bloco 4: Facilitação Metodológica -->
+                <div class="model-block" style="border-left-color: #9C27B0;">
+                    <h3 class="model-title" style="color: #9C27B0;">🎯 FACILITAÇÃO METODOLÓGICA</h3>
+                    <ul class="model-list">
+                        <li>• Design Thinking e Lean Startup</li>
+                        <li>• Metodologias Ágeis (Scrum, Kanban)</li>
+                        <li>• Lean Six Sigma</li>
+                        <li>• Gestão de Mudanças</li>
+                        <li>• OKRs e KPIs</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Princípios de Atuação -->
+            <div class="principles-container">
+                <h3 style="margin-bottom: 15px;">⚡ PRINCÍPIOS DE ATUAÇÃO</h3>
+                <div class="principles-grid">
+                    <div class="principle-item">
+                        <strong>🚀 INTRAEMPREENDEDOR</strong><br>
+                        <small>Fomenta inovação e projetos internos</small>
+                    </div>
+                    <div class="principle-item">
+                        <strong>📈 OTIMIZADOR</strong><br>
+                        <small>Foca em eficiência e produtividade</small>
+                    </div>
+                    <div class="principle-item">
+                        <strong>🎓 CAPACITADOR</strong><br>
+                        <small>Desenvolve competências digitais</small>
+                    </div>
+                    <div class="principle-item">
+                        <strong>🔄 FACILITADOR</strong><br>
+                        <small>Implementa métodos ágeis</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Proposta de Valor Atualizada -->
+        <div class="slide">
+            <div class="value-proposition">
+                <div class="value-title">🚀 PROPOSTA DE VALOR ESTRATÉGICA</div>
+                <div class="value-content">
+                    <strong>"Transformação digital através de capacitação e métodos ágeis: Centro de Excelência impulsionando produtividade e eficiência operacional"</strong>
+                </div>
+                
+                <div class="value-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-title">🎯 Facilitação Metodológica</div>
+                        <div class="highlight-desc">Centro de Excelência como apoio transversal, não hierárquico, facilitando a adoção de metodologias ágeis e boas práticas</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">🤝 Colaboração entre Ecossistemas</div>
+                        <div class="highlight-desc">Conexão estratégica entre Produção, Cliente e Operações com inteligência centralizada</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">📊 Dados & IA Centralizados</div>
+                        <div class="highlight-desc">Núcleo de inteligência servindo todos os ecossistemas com governança e qualidade</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">💻 Base Tecnológica Sólida</div>
+                        <div class="highlight-desc">Infraestrutura robusta sustentando toda a operação digital da organização</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">🚀 Programas de Intraempreendedorismo</div>
+                        <div class="highlight-desc">Fomento à inovação interna com programa de ideias, pitch sessions, mentoria e projetos colaborativos entre ecossistemas</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">🤖 IA Aplicada às Áreas</div>
+                        <div class="highlight-desc">Capacitação e implementação de IA, automação, RPA, chatbots e analytics avançado nos processos organizacionais</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">📈 Produtividade & Otimização</div>
+                        <div class="highlight-desc">Programas de melhoria contínua, process mining, lean six sigma e indicadores de performance</div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-title">🎯 Resultados Mensuráveis</div>
+                        <div class="highlight-desc">Métricas claras de transformação digital e melhoria de processos em todos os ecossistemas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animações suaves para o diagrama
+        const diagramElements = document.querySelectorAll('.ecosystem, .intelligence-core-diagram, .tech-infrastructure-diagram, .main-leadership, .excellence-center-diagram, .highlight-item, .intelligence-half');
+        
+        diagramElements.forEach((element, index) => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                element.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, 500);
+        });
+
+        // Hover effects para o diagrama
+        diagramElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                if(element.classList.contains('main-leadership')) return;
+                element.style.transform = 'translateY(-5px) scale(1.02)';
+                if(element.classList.contains('intelligence-half')) {
+                    element.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                }
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                if(element.classList.contains('main-leadership')) return;
+                element.style.transform = 'translateY(0) scale(1)';
+                if(element.classList.contains('intelligence-half')) {
+                    element.style.boxShadow = 'none';
+                }
+            });
+        });
+
+        // Animações especiais para Centro de Excelência
+        const excellenceElements = document.querySelectorAll('.excellence-center, .excellence-center-diagram');
+        excellenceElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = 'translateY(-5px) scale(1.02)';
+                element.style.boxShadow = '0 15px 30px rgba(255, 107, 107, 0.4)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'translateY(0) scale(1)';
+                element.style.boxShadow = '0 10px 25px rgba(255, 107, 107, 0.3)';
+            });
+        });
+
+        // Adiciona animações de entrada conforme scroll
+        const slides = document.querySelectorAll('.slide');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideIn 0.8s ease-out forwards';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        slides.forEach(slide => {
+            observer.observe(slide);
+        });
+
+        // Efeito de conexão visual entre Centro de Excelência e Ecossistemas
+        const connectionArrows = document.querySelectorAll('.connection-arrows');
+        connectionArrows.forEach(arrow => {
+            setInterval(() => {
+                arrow.style.color = arrow.style.color === 'rgba(255, 107, 107, 0.7)' ? 'rgba(255, 142, 83, 0.7)' : 'rgba(255, 107, 107, 0.7)';
+            }, 1500);
+        });
+
+        // Hover effects para os blocos do modelo de funcionamento
+        const modelBlocks = document.querySelectorAll('.model-block');
+        modelBlocks.forEach(block => {
+            block.addEventListener('mouseenter', () => {
+                block.style.transform = 'translateY(-5px)';
+                block.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+            });
+            
+            block.addEventListener('mouseleave', () => {
+                block.style.transform = 'translateY(0)';
+                block.style.boxShadow = 'none';
+            });
+        });
+
+        // Animação para os itens de princípios
+        const principleItems = document.querySelectorAll('.principle-item');
+        principleItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'scale(1.05)';
+                item.style.background = 'rgba(255,255,255,0.25)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'scale(1)';
+                item.style.background = 'rgba(255,255,255,0.15)';
+            });
+        });
+
+        // Animação para os conectores
+        const connectors = document.querySelectorAll('.horizontal-connector, .vertical-connector, .excellence-line');
+        
+        connectors.forEach((connector, index) => {
+            connector.style.opacity = '0';
+            connector.style.transform = 'scale(0.9)';
+            
+            setTimeout(() => {
+                connector.style.transition = 'all 0.5s ease ' + (index * 0.1) + 's';
+                connector.style.opacity = '1';
+                connector.style.transform = 'scale(1)';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
